@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda Perpustakaan</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <div class="side-nav">
+        <a href="index.html" class="nav-item active">
+            <span class="material-icons">home</span>
+            Beranda
+        </a>
+        
+        <a href="peminjaman.html" class="nav-item">
+            <span class="material-icons">bookmark</span>
+            Peminjaman
+        </a>
+        
+        <a href="profile.html" class="nav-item">
+            <span class="material-icons">person</span>
+            Profil
+        </a>
+    </div>
+
+    <div class="header">
+        <div class="header-title">Perpustakaan SMKN 7 Bengkulu</div>
+        <div class="header-icons">
+            <span class="material-icons">search</span>
+            <span class="material-icons">settings</span>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="book-section">
+            <div class="book-section-header">
+                <div class="section-title">Buku Cerita</div>
+            </div>
+            <div class="book-list" id="book-cerita"> 
+                <div class="book-card">
+                    <img src="Johannes Gutenberg.jpg" alt="Cover Kisah Johannes">
+                    <div class="book-info">
+                        <div class="book-title">Kisah Johannes</div>
+                        <div class="book-author">Taufiq</div>
+                        <button class="borrow-button" data-book-title="Kisah Johannes">Pinjam</button>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <img src="pedrok dgn jawanya.png" alt="Cover Sejarah Tanah Jawa">
+                    <div class="book-info">
+                        <div class="book-title">Sejarah Tanah Jawa</div>
+                        <div class="book-author">Mek Official</div>
+                        <button class="borrow-button" data-book-title="Sejarah Tanah Jawa">Pinjam</button>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <img src="dukun.jpg" alt="Cover Kisah Dukun Santet Bengkulu">
+                    <div class="book-info">
+                        <div class="book-title">Kisah Dukun Santet Bengkulu</div>
+                        <div class="book-author">Andre</div>
+                        <button class="borrow-button" data-book-title="Kisah Dukun Santet Bengkulu">Pinjam</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+        <div class="book-section">
+            <div class="book-section-header">
+                <div class="section-title">Buku Belajar</div>
+
+            </div>
+            <div class="book-list" id="book-belajar">
+                <div class="book-card">
+                    <img src="pace pedrok.png" alt="Cover Ilmu Pengetahuan Sosial">
+                    <div class="book-info">
+                        <div class="book-title">Ilmu Pengetahuan Sosial</div>
+                        <div class="book-author">Pedrok</div>
+                        <button class="borrow-button" data-book-title="Ilmu Pengetahuan Sosial">Pinjam</button>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <img src="bahas indonesia.jpg" alt="Cover Bahasa Indonesia">
+                    <div class="book-info">
+                        <div class="book-title">Bahasa Indonesia</div>
+                        <div class="book-author">Erlangga</div>
+                        <button class="borrow-button" data-book-title="Bahasa Indonesia">Pinjam</button>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <img src="bahasa inggris.jpg" alt="Cover Bahas Inggris">
+                    <div class="book-info">
+                        <div class="book-title">Bahas Inggris</div>
+                        <div class="book-author">Erlangga</div>
+                        <button class="borrow-button" data-book-title="Bahas Inggris">Pinjam</button>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <img src="seni budaya.jpg" alt="Cover Seni Budaya">
+                    <div class="book-info">
+                        <div class="book-title">Seni Budaya</div>
+                        <div class="book-author">Pak AP</div>
+                        <button class="borrow-button" data-book-title="Seni Budaya">Pinjam</button>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <img src="buku tkj.jpg" alt="Cover Administrasi Sistem Jaringan">
+                    <div class="book-info">
+                        <div class="book-title">Administrasi Sistem Jaringan</div>
+                        <div class="book-author">Taufiq</div>
+                        <button class="borrow-button" data-book-title="Administrasi Sistem Jaringan">Pinjam</button>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <img src="python.jpg" alt="Cover Logika Pemrograman">
+                    <div class="book-info">
+                        <div class="book-title">Logika Pemrograman</div>
+                        <div class="book-author">Taufiq</div>
+                        <button class="borrow-button" data-book-title="Logika Pemrograman">Pinjam</button>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <img src="desain grafis.jpg" alt="Cover Desain Grafis">
+                    <div class="book-info">
+                        <div class="book-title">Desain Grafis</div>
+                        <div class="book-author">Taufiq</div>
+                        <button class="borrow-button" data-book-title="Desain Grafis">Pinjam</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+ <div class="book-section">
+            <div class="book-section-header">
+                <div class="section-title">Buku Belajar</div>
+
+            </div>
+    </div>
+
+    <script>
+        // 1. Fungsionalitas Gulir
+        document.querySelectorAll('.scroll-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    // Gulir sejauh lebar card (140px) + gap (15px)
+                    const scrollDistance = 140 + 15;
+                    targetElement.scrollBy({
+                        left: scrollDistance,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // 2. Fungsionalitas Pinjam (DIUBAH UNTUK MENYIMPAN KE LOCAL STORAGE)
+        document.querySelectorAll('.borrow-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Mengambil judul buku dari atribut data-book-title
+                const bookTitle = this.getAttribute('data-book-title');
+                
+                // Menampilkan konfirmasi kepada pengguna
+                const isConfirmed = confirm(`Apakah Anda yakin ingin meminjam buku: ${bookTitle}?`);
+                
+                if (isConfirmed) {
+                    // --- LOGIKA PENYIMPANAN DATA BARU ---
+                    
+                    // 1. Ambil data pinjaman yang sudah ada dari Local Storage
+                    // Jika belum ada, gunakan array kosong []
+                    let borrowedBooks = JSON.parse(localStorage.getItem('peminjamanData')) || [];
+
+                    // 2. Buat objek buku baru
+                    const newBook = {
+                        title: bookTitle,
+                        borrowDate: new Date().toLocaleDateString('id-ID'), // Tanggal hari ini dalam format lokal (misal: 17/11/2025)
+                    };
+
+                    // 3. Tambahkan buku baru ke array
+                    borrowedBooks.push(newBook);
+
+                    // 4. Simpan kembali array yang diperbarui ke Local Storage
+                    localStorage.setItem('peminjamanData', JSON.stringify(borrowedBooks));
+                    
+                    // --- END LOGIKA PENYIMPANAN DATA ---
+                    
+                    alert(`Buku "${bookTitle}" berhasil ditambahkan ke daftar pinjaman! Cek tab Peminjaman Anda.`);
+                    
+                } else {
+                    alert(`Peminjaman buku "${bookTitle}" dibatalkan.`);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

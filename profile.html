@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Admin</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        /* Gaya Khusus untuk Halaman Profil */
+        .profile-header {
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        .profile-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 3px solid #007bff;
+        }
+        .profile-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .profile-status {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Gaya untuk Daftar Pengaturan (List) */
+        .settings-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .setting-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.2s;
+        }
+        .setting-item:hover {
+            background-color: #f9f9f9;
+        }
+        .setting-info {
+            display: flex;
+            align-items: center;
+        }
+        .setting-icon {
+            font-size: 24px;
+            color: #007bff;
+            margin-right: 15px;
+        }
+        .setting-name {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .setting-action span {
+            color: #999;
+        }
+        
+        /* Tambahkan CSS untuk tombol Logout */
+        .logout-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 30px;
+            background-color: #dc3545; /* Merah */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .logout-button:hover {
+            background-color: #c82333;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="side-nav">
+    <a href="index.html" class="nav-item">
+        <span class="material-icons">home</span>
+        Beranda
+    </a>
+    
+    <a href="peminjaman.html" class="nav-item">
+        <span class="material-icons">bookmark</span>
+        Peminjaman
+    </a>
+    
+    <a href="profile.html" class="nav-item active">
+        <span class="material-icons">person</span>
+        Profil
+    </a>
+</div>
+
+    <div class="header">
+        <div class="header-title">Profil Pengguna</div>
+        <div class="header-icons">
+            <span class="material-icons">search</span>
+            <span class="material-icons">settings</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="profile-header">
+            <img src="pace pedrok.png" alt="Avatar Pengguna" class="profile-avatar"> 
+            <div class="profile-name">Admin Perpustakaan</div>
+            <div class="profile-status">Kabag Admin</div>
+        </div>
+
+        <h2>Pengaturan</h2>
+        <div class="settings-list">
+            
+            <a href="#" class="setting-item">
+                <div class="setting-info">
+                    <span class="material-icons setting-icon">account_circle</span>
+                    <div class="setting-name">Edit Akun</div>
+                </div>
+                <div class="setting-action">
+                    <span class="material-icons">chevron_right</span>
+                </div>
+            </a>
+            
+            <a href="#" class="setting-item">
+                <div class="setting-info">
+                    <span class="material-icons setting-icon">history</span>
+                    <div class="setting-name">Riwayat Peminjaman</div>
+                </div>
+                <div class="setting-action">
+                    <span class="material-icons">chevron_right</span>
+                </div>
+            </a>
+            
+            <a href="#" class="setting-item">
+                <div class="setting-info">
+                    <span class="material-icons setting-icon">notifications</span>
+                    <div class="setting-name">Notifikasi</div>
+                </div>
+                <div class="setting-action">
+                    <span class="material-icons">chevron_right</span>
+                </div>
+            </a>
+            
+            <a href="#" class="setting-item">
+                <div class="setting-info">
+                    <span class="material-icons setting-icon">help_outline</span>
+                    <div class="setting-name">Bantuan & Dukungan</div>
+                </div>
+                <div class="setting-action">
+                    <span class="material-icons">chevron_right</span>
+                </div>
+            </a>
+
+        </div>
+
+        <button class="logout-button">Keluar (Logout)</button>
+        
+    </div>
+
+</body>
+</html>

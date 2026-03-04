@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peminjaman - Perpustakaan</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+    </head>
+<body>
+
+    <div class="side-nav">
+        <a href="index.html" class="nav-item">
+            <span class="material-icons">home</span>
+            Beranda
+        </a>
+        <a href="peminjaman.html" class="nav-item active">
+            <span class="material-icons">bookmark</span>
+            Peminjaman
+        </a>
+        <a href="profile.html" class="nav-item">
+            <span class="material-icons">person</span>
+            Profil
+        </a>
+    </div>
+
+    <div class="header">
+        <div class="header-title">Daftar Peminjaman Anda</div>
+        <div class="header-icons">
+            <span class="material-icons">search</span>
+            <span class="material-icons">settings</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>📚 Buku yang Sedang Dipinjam</h2>
+        
+        <div id="peminjaman-list">
+            <p id="empty-message">Belum ada buku yang Anda pinjam.</p>
+        </div>
+
+    </div>
+
+    <script>
+        function loadPeminjamanData() {
+            const listContainer = document.getElementById('peminjaman-list');
+            const emptyMessage = document.getElementById('empty-message');
+            
+            // 1. Ambil data dari Local Storage
+            const borrowedBooks = JSON.parse(localStorage.getItem('peminjamanData')) || [];
+
+            // Hapus pesan kosong jika ada buku
+            if (borrowedBooks.length > 0) {
+                if (emptyMessage) emptyMessage.style.display = 'none';
+
+                let htmlContent = '<table>';
+                htmlContent += '<tr><th>No</th><th>Judul Buku</th><th>Tanggal Pinjam</th></tr>';
+
+                borrowedBooks.forEach((book, index) => {
+                    htmlContent += `
+                        <tr>
+                            <td>${index + 1}</td>
+                            <td>${book.title}</td>
+                            <td>${book.borrowDate}</td>
+                        </tr>
+                    `;
+                });
+
+                htmlContent += '</table>';
+                listContainer.innerHTML = htmlContent;
+                
+            } else {
+                 if (emptyMessage) emptyMessage.style.display = 'block';
+            }
+        }
+
+        // Panggil fungsi saat halaman dimuat
+        window.onload = loadPeminjamanData;
+    </script>
+
+</body>
+</html>
